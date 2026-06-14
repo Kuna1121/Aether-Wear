@@ -8,6 +8,7 @@ import MainLayout from "../shared/layouts/main-layout";
 import type { AppRoute } from "./route.interface.model";
 import { Collection_ROUTES } from "../features/collections/collections.route";
 import { Profile_ROUTES } from "../features/profile/profile.routes";
+import { OrderHistory_ROUTES } from "../features/order-history/order-history.route";
 
 export const APP_ROUTES: AppRoute[] = [
   ...AUTH_ROUTES,
@@ -25,6 +26,7 @@ export const APP_ROUTES: AppRoute[] = [
       ...Shop_ROUTES,
       ...Collection_ROUTES,
       ...Profile_ROUTES,
+      ...OrderHistory_ROUTES,
     ],
   },
   {

@@ -24,7 +24,7 @@ export default function ProfileMenu({ user }: { user: Users }) {
           <Link to="/profile" className="dropdown-item">
             My Profile
           </Link>
-          <Link to="/orders" className="dropdown-item">
+          <Link to="/order-history" className="dropdown-item">
             Orders History
           </Link>
           <div className="dropdown-item logout-item" onClick={handleLogout}>
