@@ -1,11 +1,11 @@
 /* Clean Blue & White Theme Palette */
 :root {
-  --primary-bg: #FFFFFF;
-  --secondary-bg: #F8F9FA;
+  --primary-bg: #EAF0F8; /* Soft Ice Blue */
+  --secondary-bg: #E0E8F5; /* Slightly deeper ice blue for contrast */
   --card-bg: #FFFFFF;
   --primary-text: #0F1419;
   --secondary-text: #6B7280;
-  --border-color: #E5E7EB;
+  --border-color: #D1D5DB;
   --accent-color: #2563EB;
   --accent-hover: #1E40AF;
   --success: #10B981;
@@ -214,7 +214,7 @@ body {
 /* Luxury Main Layout & Navbar Styles */
 .main-layout-container {
   min-height: 100vh;
-  background-color: var(--bg-color);
+  background-color: var(--primary-bg);
   color: var(--primary-text);
   display: flex;
   flex-direction: column;
