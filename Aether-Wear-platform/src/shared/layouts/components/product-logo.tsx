@@ -20,15 +20,12 @@ export default function ProductLogo() {
               </linearGradient>
             </defs>
             <path
-              d="M256 110 L140 370 H195 L256 230 L317 370 H372 L256 110 Z"
+              d="M 246 80 C 106 120 66 240 116 350 L 166 300 V 260 H 206 V 360 L 246 400 V 80 Z M 166 220 C 166 180 186 140 206 120 V 220 H 166 Z"
               fill="url(#navBlue)"
             />
-            <path d="M185 300 H327" stroke="#0D0D0D" strokeWidth="18" />
             <path
-              d="M202 300 H310"
-              stroke="url(#navBlue)"
-              strokeWidth="6"
-              strokeLinecap="round"
+              d="M 266 80 V 400 L 306 360 V 230 L 331 180 L 356 230 V 300 L 396 350 C 446 240 406 120 266 80 Z"
+              fill="url(#navBlue)"
             />
           </svg>
         </div>
