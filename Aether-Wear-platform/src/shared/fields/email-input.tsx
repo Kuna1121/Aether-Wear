@@ -5,6 +5,7 @@ const EmailInput = ({
   name = "email",
   placeholder = "Enter your email",
   rules = [],
+  disabled = false,
 }) => {
   return (
     <Form.Item
@@ -22,7 +23,7 @@ const EmailInput = ({
         ...rules,
       ]}
     >
-      <Input size="large" placeholder={placeholder} />
+      <Input size="large" placeholder={placeholder} disabled={disabled} />
     </Form.Item>
   );
 };

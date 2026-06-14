@@ -5,6 +5,12 @@
       "email": "kunal@yopmail.com",
       "password": "Test@123",
       "id": "wjfkcsFSSTo"
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "email": "cr7@yopmail.com",
+      "password": "Test@123",
+      "id": "zeoRy2BGI2s"
     }
   ],
   "products": [
@@ -49,6 +55,39 @@
       "image": "https://images.unsplash.com/photo-1608063615781-e5ef8beae1db?auto=format&fit=crop&q=80&w=600"
     }
   ],
+  "reason": [
+    {
+      "id": "1",
+      "value": "Product Inquiry",
+      "label": "Product Inquiry"
+    },
+    {
+      "id": "2",
+      "value": "Order Status & Tracking",
+      "label": "Order Status & Tracking"
+    },
+    {
+      "id": "3",
+      "value": "Returns & Exchanges",
+      "label": "Returns & Exchanges"
+    },
+    {
+      "id": "4",
+      "value": "Technical support",
+      "label": "Technical Support"
+    },
+    {
+      "id": "5",
+      "value": "Feedback & Suggestions",
+      "label": "Feedback & Suggestions"
+    },
+    {
+      "id": "6",
+      "value": "Other",
+      "label": "Other"
+    }
+  ],
+  "support": [],
   "cart": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
