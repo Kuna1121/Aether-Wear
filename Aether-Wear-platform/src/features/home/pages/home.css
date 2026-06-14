@@ -195,3 +195,34 @@
     height: 400px;
   }
 }
+
+/* Support Message */
+.support-message-container {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 16px;
+  background-color: var(--card-bg, #FFFFFF);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  border: 1px solid var(--border-color);
+}
+
+.support-message-container p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.support-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.support-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}

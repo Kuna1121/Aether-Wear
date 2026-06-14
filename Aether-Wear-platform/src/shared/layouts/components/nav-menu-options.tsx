@@ -8,6 +8,7 @@ export default function NavMenuOptions() {
     { label: "Collections", path: "/collections" },
     { label: "Shop", path: "/shop" },
     { label: "About", path: "/about" },
+    { label: "Support", path: "/support" },
   ];
 
   return (

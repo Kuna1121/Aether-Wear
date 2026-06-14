@@ -1,4 +1,4 @@
-import { CategoryCards, HeroBanner } from "../components";
+import { CategoryCards, HeroBanner, SupportMessage } from "../components";
 import { BANNERS, CATEGORIES } from "../configs";
 import "./home.css";
 
@@ -11,6 +11,7 @@ export default function Home() {
       <div className="home-page-content">
         <HeroBanner banners={banners} />
         <CategoryCards categories={categories} />
+        <SupportMessage />
       </div>
     </div>
   );
