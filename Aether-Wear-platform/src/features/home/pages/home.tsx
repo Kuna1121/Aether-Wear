@@ -1,5 +1,4 @@
-import CategoryCards from "../components/category-cards";
-import HeroBanner from "../components/hero-banner";
+import { CategoryCards, HeroBanner } from "../components";
 import { BANNERS, CATEGORIES } from "../configs";
 import "./home.css";
 
