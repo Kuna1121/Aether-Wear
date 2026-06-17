@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../pages/home.css";
 
 export default function HeroBanner({ banners }) {
@@ -28,6 +29,9 @@ export default function HeroBanner({ banners }) {
             <div className="hero-slide-content">
               <h2>{banner.title}</h2>
               <p>{banner.subtitle}</p>
+              <Link to="/collections" className="hero-shop-btn">
+                Shop Now
+              </Link>
             </div>
           </div>
         ))}

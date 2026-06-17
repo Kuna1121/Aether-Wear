@@ -1,3 +1,4 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
 import "../pages/home.css";
 
 export default function CategoryCards({ categories }) {
@@ -11,6 +12,9 @@ export default function CategoryCards({ categories }) {
           </div>
           <div className="category-card-content">
             <h3>{category.title}</h3>
+            <div className="category-arrow">
+              <ArrowRightOutlined />
+            </div>
           </div>
         </div>
       ))}

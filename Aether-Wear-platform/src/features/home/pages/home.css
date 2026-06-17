@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-bg, #FFFFFF);
+  background-color: var(--primary-bg, #ffffff);
 }
 
 .home-page-content {
@@ -25,7 +25,7 @@
   overflow: hidden;
   background-color: transparent;
   border-radius: 8px; /* Slight rounding for polish, while keeping it rectangular as per wireframe */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .hero-slider {
@@ -51,7 +51,11 @@
 .hero-slide-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15, 20, 25, 0.7) 0%, rgba(15, 20, 25, 0.1) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(15, 20, 25, 0.7) 0%,
+    rgba(15, 20, 25, 0.1) 100%
+  );
   z-index: 1;
 }
 
@@ -61,13 +65,13 @@
   left: 5%;
   right: 5%;
   z-index: 2;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-slide-content h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 42px;
   font-weight: 700;
   margin: 0 0 8px 0;
@@ -76,8 +80,35 @@
 
 .hero-slide-content p {
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 24px 0;
   opacity: 0.9;
+}
+
+.hero-shop-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #ffffff;
+  color: #111827;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-shop-btn:hover {
+  background: var(--accent-color, #2563eb);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
 }
 
 /* Indicators */
@@ -108,7 +139,7 @@
 
 .indicator-dot.active {
   background-color: transparent;
-  border-color: #FFFFFF;
+  border-color: #ffffff;
   transform: scale(1.2);
 }
 
@@ -126,7 +157,7 @@
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
@@ -169,16 +200,16 @@
 }
 
 .category-card-content h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 18px; /* Reduced to fit long titles perfectly */
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 1.4;
   margin: 0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   transition: transform 0.4s ease;
 }
 
@@ -201,18 +232,18 @@
   text-align: center;
   padding: 40px 20px;
   margin-top: 16px;
-  background-color: var(--card-bg, #FFFFFF);
+  background-color: var(--card-bg, #ffffff);
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   border: 1px solid var(--border-color);
 }
 
 .support-message-container p {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 18px;
   color: var(--secondary-text);
   line-height: 1.6;
-  margin: 0;
+  margin: 24px 0 0 0;
 }
 
 .support-link {
@@ -233,7 +264,7 @@
 }
 
 .features-heading {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--primary-text, #111827);
@@ -256,7 +287,10 @@
   background: var(--card-bg, #f9fafb);
   border: 1px solid var(--border-color, #e5e7eb);
   border-radius: 16px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .feature-card:hover {
@@ -275,7 +309,9 @@
   background: rgba(37, 99, 235, 0.08);
   color: var(--accent-color, #2563eb);
   font-size: 26px;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 .feature-card:hover .feature-icon {
@@ -284,7 +320,7 @@
 }
 
 .feature-card h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--primary-text, #111827);
@@ -293,7 +329,7 @@
 }
 
 .feature-card p {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 14px;
   color: var(--secondary-text, #6b7280);
   margin: 0;
@@ -312,4 +348,3 @@
     grid-template-columns: 1fr;
   }
 }
-
