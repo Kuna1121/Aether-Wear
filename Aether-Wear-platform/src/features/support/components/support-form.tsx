@@ -1,32 +1,33 @@
 import { Card, Form, Input } from "antd";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BasicButton } from "../../../shared/elements/buttons";
 import { EmailInput, SelectInput } from "../../../shared/fields";
-import type { SupportFormProps } from "../models";
-
-const REASON_OPTIONS = [
-  { value: "Product Inquiry", label: "Product Inquiry" },
-  { value: "Order Status & Tracking", label: "Order Status & Tracking" },
-  { value: "Returns & Exchanges", label: "Returns & Exchanges" },
-  { value: "Technical support", label: "Technical Support" },
-  { value: "Feedback & Suggestions", label: "Feedback & Suggestions" },
-  { value: "Other", label: "Other" },
-];
+import type {
+  Reasons,
+  SupportFormProps,
+  SupportTicketPayload,
+} from "../models";
+import { getReasons } from "../services";
+import { snackbar } from "../../../shared/services";
 
 export default function SupportForm({ email, onSubmit }: SupportFormProps) {
   const [form] = Form.useForm();
+  const [reasonOptions, setReasonOptions] = useState<Reasons[]>([]);
 
   useEffect(() => {
     if (email) {
       form.setFieldsValue({ email });
     }
-  }, [email, form]);
+    getReasons()
+      .then((data) => {
+        setReasonOptions(data);
+      })
+      .catch((error) => {
+        snackbar.error(error);
+      });
+  }, []);
 
-  const onFinish = (values: {
-    email: string;
-    reason: string;
-    description: string;
-  }) => {
+  const onFinish = (values: SupportTicketPayload) => {
     onSubmit(values);
     form.resetFields();
     form.setFieldsValue({ email });
@@ -36,7 +37,9 @@ export default function SupportForm({ email, onSubmit }: SupportFormProps) {
     <Card className="support-card">
       <div className="support-form-header">
         <h2>Send us a Message</h2>
-        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+        <p>
+          Fill out the form below and we'll get back to you as soon as possible.
+        </p>
       </div>
       <Form
         form={form}
@@ -45,18 +48,13 @@ export default function SupportForm({ email, onSubmit }: SupportFormProps) {
         onFinish={onFinish}
         requiredMark={false}
       >
-        <EmailInput
-          label="Email Address"
-          name="email"
-          placeholder="e.g. yourname@example.com"
-          disabled={true}
-        />
+        <EmailInput label="Email Address" name="email" disabled={true} />
 
         <SelectInput
           label="Reason for Inquiry"
           name="reason"
           placeholder="Select a reason"
-          options={REASON_OPTIONS}
+          options={reasonOptions}
           rules={[{ required: true, message: "Please select a reason" }]}
         />
 

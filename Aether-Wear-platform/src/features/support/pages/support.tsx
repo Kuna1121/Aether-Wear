@@ -2,7 +2,6 @@ import { useState } from "react";
 import { snackbar } from "../../../shared/services";
 import {
   SupportBanner,
-  SupportCards,
   SupportFaqs,
   SupportForm,
   SupportHeader,
@@ -25,9 +24,12 @@ export default function Support() {
 
   const handleFormSubmit = async (values: SupportTicketPayload) => {
     try {
+      const storedUser = localStorage.getItem("user");
+      const { id } = JSON.parse(storedUser);
       const payload = {
         ...values,
         createdAt: new Date().toISOString(),
+        userId: id,
       };
       const response = await submitSupportTicket(payload);
       if (response) {

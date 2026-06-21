@@ -1,8 +1,6 @@
+import type { SupportTicketPayload } from "./support-request.model";
+
 export interface SupportFormProps {
   email: string;
-  onSubmit: (values: {
-    email: string;
-    reason: string;
-    description: string;
-  }) => Promise<void>;
+  onSubmit: (values: SupportTicketPayload) => void;
 }
