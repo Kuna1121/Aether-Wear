@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-bg, #ffffff);
+  background-color: transparent;
 }
 
 .home-page-content {
