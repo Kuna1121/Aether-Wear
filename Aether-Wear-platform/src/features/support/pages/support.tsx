@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { snackbar } from "../../../shared/services";
-import { SupportForm, SupportHeader } from "../components";
+import {
+  SupportBanner,
+  SupportCards,
+  SupportFaqs,
+  SupportForm,
+  SupportHeader,
+  SupportReachUs,
+} from "../components";
 import type { SupportTicketPayload } from "../models";
 import { submitSupportTicket } from "../services";
 import "./support.css";
@@ -38,6 +45,9 @@ export default function Support() {
       <div className="support-page-content">
         <SupportHeader />
         <SupportForm email={email} onSubmit={handleFormSubmit} />
+        <SupportFaqs />
+        <SupportReachUs />
+        <SupportBanner />
       </div>
     </div>
   );

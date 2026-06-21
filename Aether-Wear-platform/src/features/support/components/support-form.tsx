@@ -34,6 +34,10 @@ export default function SupportForm({ email, onSubmit }: SupportFormProps) {
 
   return (
     <Card className="support-card">
+      <div className="support-form-header">
+        <h2>Send us a Message</h2>
+        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+      </div>
       <Form
         form={form}
         name="support-form"
@@ -94,7 +98,7 @@ export default function SupportForm({ email, onSubmit }: SupportFormProps) {
           </div>
 
           <div className="support-submit-container">
-            <BasicButton text="Send" htmlType="submit" type="primary" />
+            <BasicButton text="Send Message" htmlType="submit" type="primary" />
           </div>
         </div>
       </Form>

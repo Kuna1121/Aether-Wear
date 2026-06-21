@@ -28,4 +28,3 @@ export const ChooseUs: ChooseUsModel[] = [
     description: "Stylish, durable, and made to last.",
   },
 ];
-
