@@ -1,0 +1,60 @@
+.common-dialog .ant-modal-content {
+  border-radius: 16px;
+  padding: 32px 24px 24px;
+}
+
+.common-dialog-heading {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.common-dialog-description {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+}
+
+.common-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.common-dialog-btn-secondary {
+  border: 1.5px solid #2563eb !important;
+  color: #2563eb !important;
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  height: 42px !important;
+  padding: 0 24px !important;
+  transition: all 0.3s ease !important;
+}
+
+.common-dialog-btn-secondary:hover {
+  background-color: rgba(37, 99, 235, 0.05) !important;
+  border-color: #1d4ed8 !important;
+  color: #1d4ed8 !important;
+}
+
+.common-dialog-btn-primary {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  height: 42px !important;
+  padding: 0 24px !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.common-dialog-btn-primary:hover {
+  background-color: #1d4ed8 !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3) !important;
+  transform: translateY(-1px);
+}
